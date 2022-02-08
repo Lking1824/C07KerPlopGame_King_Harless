@@ -1,3 +1,6 @@
+// Lucas King & Mason Harless
+// C07A KerPlop Game
+
 package gameEngine;
 
 /**
