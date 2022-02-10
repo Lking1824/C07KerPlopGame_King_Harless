@@ -9,10 +9,10 @@ import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 import gameEngine.Moveable;
 
-public class MotorCycle extends GamePiece implements Moveable {
+public class Teleporter extends GamePiece implements Moveable {
 	
-	// MotorCycle constructor auto-generated
-	public MotorCycle(char symbol, String label, int location) {
+	// Teleporter constructor auto-generated
+	public Teleporter(char symbol, String label, int location) {
 		super(symbol, label, location);
 		
 	}
@@ -21,7 +21,7 @@ public class MotorCycle extends GamePiece implements Moveable {
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
 		// TODO Auto-generated method stub
 
-		// Move the motorcycle forward
+		// Move the Teleporter forward
 		if (playerLocation == getLocation()) {
 			return InteractionResult.ADVANCE;
 		}

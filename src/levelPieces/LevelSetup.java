@@ -22,13 +22,70 @@ public class LevelSetup {
 	public void createLevel(int num) {
 		// Only if the level is 1
 		if (num == 1) {
+			CautionSign sign = new CautionSign('!');
+			ClayMine mine = new ClayMine('M', "Clay mine", 12);
+			PetGoat rupert = new PetGoat('R', "Goat named Rupert", 6);
+			Teleporter teleporter = new Teleporter('T', "Will advance to next level", 8);
+			Hopper hopper = new Hopper('H', "Will kill player", 5);
+			Gold gold1 = new Gold('G', "Gold (if you get two you escape)", 19);
+			Gold gold2 = new Gold('G', "Gold (if you get two you escape)", 7);
 			
+			board[3] = sign;
+			board[mine.getLocation()] = mine;
+			board[rupert.getLocation()] = rupert;
+			board[teleporter.getLocation()] = teleporter;
+			board[hopper.getLocation()] = hopper;
+			board[gold1.getLocation()] = gold1;
+			board[gold2.getLocation()] = gold2;
+			
+			System.out.println(sign.character);
+			System.out.println(mine.toString());
+			System.out.println(rupert.toString());
+			System.out.println(hopper.toString());
+			System.out.println(gold1.toString());
+			System.out.println(teleporter.toString());
 		}
 		// 
 		if (num == 2) {
 			
 		}
 	}
-	
-	
+
+	public ArrayList<Moveable> getMovingPieces() {
+		// TODO Auto-generated method stub
+		ArrayList<Moveable> moveable = new ArrayList<Moveable>();
+		
+		for (Drawable piece : board) {
+			if (piece instanceof PetGoat || piece instanceof Teleporter) {
+				moveable.add((Moveable) piece);
+			}
+		}
+		
+		return moveable;
+	}
+
+	public ArrayList<GamePiece> getInteractingPieces() {
+		// TODO Auto-generated method stub
+		ArrayList<GamePiece> interaction = new ArrayList<GamePiece>();
+		
+		for (Drawable piece : board) {
+			if (piece instanceof PetGoat || piece instanceof Teleporter || piece instanceof ClayMine) {
+				interaction.add((GamePiece) piece);
+			}
+		}
+		
+		return interaction;
+	}
+
+	public int getPlayerStartLoc() {
+		// TODO Auto-generated method stub
+		for (Drawable piece : board) {
+			if (piece instanceof Player) {
+				return ((Player) piece).getLocation();
+			}
+		}
+		
+		return 0;
+	}
+		
 }

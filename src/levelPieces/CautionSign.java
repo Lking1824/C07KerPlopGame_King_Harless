@@ -7,7 +7,7 @@ import gameEngine.Drawable;
 public class CautionSign implements Drawable {
 	char character;
 
-	public CautionSign() {
+	public CautionSign(char lol) {
 		super();
 		// TODO Auto-generated constructor stub
 		character = '!';
