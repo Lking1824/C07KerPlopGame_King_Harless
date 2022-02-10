@@ -1,0 +1,80 @@
+// Lucas King & Mason Harless
+// C07A KerPlop Game
+
+commit 8c669675b38d8b411ff120ec041e8485bf2a7685 (HEAD -> master, origin/master)
+Author: Lking1824 <king1@mymail.mines.edu>
+Date:   Wed Feb 9 23:25:58 2022 -0700
+
+    Fixed formatting in LevelSetup file
+
+commit 78bf9e8cd9641450a96e001c4b3f09f2485077e6
+Author: Lking1824 <81127783+Lking1824@users.noreply.github.com>
+Date:   Wed Feb 9 23:17:54 2022 -0700
+
+    Create README.txt
+
+    Added Game Pieces explanation
+
+commit 234602045afd8ef50b93e7d39a3dd8a85bfdb011
+Author: Lking1824 <king1@mymail.mines.edu>
+Date:   Wed Feb 9 23:06:14 2022 -0700
+
+    Added second level to game
+
+commit 8197f83e824a079f883c044eb9bdc46ccfcc4018
+Author: Lking1824 <king1@mymail.mines.edu>
+Date:   Wed Feb 9 22:12:27 2022 -0700
+
+    Have the gameboard working
+
+commit 32170093bfd6bdf0307967089d6b12eedf92b212
+:...skipping...
+commit 8c669675b38d8b411ff120ec041e8485bf2a7685 (HEAD -> master, origin/master)
+Author: Lking1824 <king1@mymail.mines.edu>
+Date:   Wed Feb 9 23:25:58 2022 -0700
+
+    Fixed formatting in LevelSetup file
+
+commit 78bf9e8cd9641450a96e001c4b3f09f2485077e6
+Author: Lking1824 <81127783+Lking1824@users.noreply.github.com>
+Date:   Wed Feb 9 23:17:54 2022 -0700
+
+    Create README.txt
+
+    Added Game Pieces explanation
+
+commit 234602045afd8ef50b93e7d39a3dd8a85bfdb011
+Author: Lking1824 <king1@mymail.mines.edu>
+Date:   Wed Feb 9 23:06:14 2022 -0700
+
+    Added second level to game
+
+commit 8197f83e824a079f883c044eb9bdc46ccfcc4018
+Author: Lking1824 <king1@mymail.mines.edu>
+Date:   Wed Feb 9 22:12:27 2022 -0700
+
+    Have the gameboard working
+
+commit 32170093bfd6bdf0307967089d6b12eedf92b212
+Author: Lking1824 <king1@mymail.mines.edu>
+Date:   Wed Feb 9 19:55:00 2022 -0700
+
+    Added the gold class which gives the player a point if they are at same location
+
+commit d68bdf0a6ca5b0f92d11529953b6ec9daa5a0cd7
+Author: Lking1824 <king1@mymail.mines.edu>
+Date:   Wed Feb 9 19:42:11 2022 -0700
+
+    Added the caution sign drawable
+
+commit 677ea3c22978a52fcedda2b8d4b16b666d0c35c3
+Author: Lking1824 <king1@mymail.mines.edu>
+Date:   Tue Feb 8 11:13:29 2022 -0700
+
+    Created MotorCycle, ClayMine, PetGoat classes
+
+commit dec30d106096a29058194b3fee725cdc585ff4ad
+Author: Lking1824 <king1@mymail.mines.edu>
+Date:   Sun Feb 6 21:28:16 2022 -0700
+
+    Created Project
