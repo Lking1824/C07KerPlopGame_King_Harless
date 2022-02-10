@@ -28,7 +28,7 @@ public class LevelSetup {
 			Teleporter teleporter = new Teleporter('T', "Will advance to next level", 8);
 			Hopper hopper = new Hopper('H', "Will kill player", 5);
 			Gold gold1 = new Gold('G', "Gold (if you get two you escape)", 19);
-			Gold gold2 = new Gold('G', "Gold (if you get two you escape)", 7);
+			Gold gold2 = new Gold('G', "Gold (if you get two you escape)", 10);
 			
 			board[3] = sign;
 			board[mine.getLocation()] = mine;
@@ -47,7 +47,29 @@ public class LevelSetup {
 		}
 		// 
 		if (num == 2) {
+			CautionSign sign = new CautionSign('!');
+			ClayMine mine1 = new ClayMine('M', "Clay mine", 12);
+			ClayMine mine2 = new ClayMine('M', "Clay mine", 2);
+			PetGoat rupert = new PetGoat('R', "Goat named Rupert", 6);
+			Hopper hopper1 = new Hopper('H', "Will kill player", 5);
+			Hopper hopper2 = new Hopper('H', "Will kill player", 15);
+			Gold gold1 = new Gold('G', "Gold (if you get two you escape)", 19);
+			Gold gold2 = new Gold('G', "Gold (if you get two you escape)", 10);
 			
+			board[3] = sign;
+			board[mine1.getLocation()] = mine1;
+			board[mine2.getLocation()] = mine2;
+			board[rupert.getLocation()] = rupert;
+			board[hopper1.getLocation()] = hopper1;
+			board[hopper2.getLocation()] = hopper2;
+			board[gold1.getLocation()] = gold1;
+			board[gold2.getLocation()] = gold2;
+			
+			System.out.println(sign.character);
+			System.out.println(mine1.toString());
+			System.out.println(rupert.toString());
+			System.out.println(hopper1.toString());
+			System.out.println(gold1.toString());
 		}
 	}
 
@@ -56,7 +78,7 @@ public class LevelSetup {
 		ArrayList<Moveable> moveable = new ArrayList<Moveable>();
 		
 		for (Drawable piece : board) {
-			if (piece instanceof PetGoat || piece instanceof Teleporter) {
+			if (piece instanceof PetGoat || piece instanceof Teleporter || piece instanceof Hopper) {
 				moveable.add((Moveable) piece);
 			}
 		}
@@ -69,7 +91,7 @@ public class LevelSetup {
 		ArrayList<GamePiece> interaction = new ArrayList<GamePiece>();
 		
 		for (Drawable piece : board) {
-			if (piece instanceof PetGoat || piece instanceof Teleporter || piece instanceof ClayMine) {
+			if (piece instanceof PetGoat || piece instanceof Teleporter || piece instanceof ClayMine || piece instanceof Hopper || piece instanceof Gold) {
 				interaction.add((GamePiece) piece);
 			}
 		}

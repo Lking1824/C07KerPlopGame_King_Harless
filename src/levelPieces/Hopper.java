@@ -56,13 +56,13 @@ public class Hopper extends GamePiece implements Moveable {
 			int dummyLoc = getLocation() - 2;
 			
 			// Loop until there is an empty location
-			while (gameBoard[dummyLoc] != null) {
+			while (gameBoard[dummyLoc] != null && dummyLoc > 1) {
 				// Decrement dummy location
 				dummyLoc = dummyLoc - 2;
 			}
 			
 			// If dummy is less than 0, set whichWay to right
-			if (dummyLoc <= 0) {
+			if (dummyLoc <= 1) {
 				whichWay = 1;
 			}
 			else {
@@ -94,13 +94,14 @@ public class Hopper extends GamePiece implements Moveable {
 			int dummyLoc = getLocation() + 2;
 			
 			// Loop until there is an empty location
-			while (gameBoard[dummyLoc] != null) {
+			while (gameBoard[dummyLoc] != null && (dummyLoc < (GameEngine.BOARD_SIZE - 2))) {
 				// Decrement dummy location
 				dummyLoc = dummyLoc + 2;
+				System.out.println("Dummy location is:" + dummyLoc);
 			}
 			
 			// If dummy is less than 0, set whichWay to right
-			if (dummyLoc >= (GameEngine.BOARD_SIZE - 1)) {
+			if (dummyLoc >= (GameEngine.BOARD_SIZE - 2)) {
 				whichWay = 0;
 			}
 			else {
