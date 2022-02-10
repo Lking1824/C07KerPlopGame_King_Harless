@@ -23,10 +23,10 @@ public class LevelSetup {
 		// Only if the level is 1
 		if (num == 1) {
 			CautionSign sign = new CautionSign('!');
-			ClayMine mine = new ClayMine('M', "Clay mine", 12);
+			ClayMine mine = new ClayMine('M', "Clay mine (Will hurt you if you step on it)", 12);
 			PetGoat rupert = new PetGoat('R', "Goat named Rupert", 6);
-			Teleporter teleporter = new Teleporter('T', "Will advance to next level", 8);
-			Hopper hopper = new Hopper('H', "Will kill player", 5);
+			Teleporter teleporter = new Teleporter('T', "Will advance to next level immediatly", 8);
+			Hopper hopper = new Hopper('H', "Will kill Player when next to him", 5);
 			Gold gold1 = new Gold('G', "Gold (if you get two you escape)", 19);
 			Gold gold2 = new Gold('G', "Gold (if you get two you escape)", 10);
 			
@@ -38,21 +38,22 @@ public class LevelSetup {
 			board[gold1.getLocation()] = gold1;
 			board[gold2.getLocation()] = gold2;
 			
-			System.out.println(sign.character);
-			System.out.println(mine.toString());
+			System.out.println("P - This player is you");
+			System.out.println(gold1.toString());
 			System.out.println(rupert.toString());
 			System.out.println(hopper.toString());
-			System.out.println(gold1.toString());
 			System.out.println(teleporter.toString());
+			System.out.println(mine.toString());
+			System.out.println(sign.character + "Caution Sign (Does nothing)");
 		}
 		// 
 		if (num == 2) {
 			CautionSign sign = new CautionSign('!');
-			ClayMine mine1 = new ClayMine('M', "Clay mine", 12);
-			ClayMine mine2 = new ClayMine('M', "Clay mine", 2);
+			ClayMine mine1 = new ClayMine('M', "Clay mine (Will hurt you if you step on it)", 12);
+			ClayMine mine2 = new ClayMine('M', "Clay mine (Will hurt you if you step on it)", 2);
 			PetGoat rupert = new PetGoat('R', "Goat named Rupert", 6);
-			Hopper hopper1 = new Hopper('H', "Will kill player", 5);
-			Hopper hopper2 = new Hopper('H', "Will kill player", 15);
+			Hopper hopper1 = new Hopper('H', "Will kill Player when next to him", 5);
+			Hopper hopper2 = new Hopper('H', "Will kill Player when next to him", 15);
 			Gold gold1 = new Gold('G', "Gold (if you get two you escape)", 19);
 			Gold gold2 = new Gold('G', "Gold (if you get two you escape)", 10);
 			
@@ -65,11 +66,12 @@ public class LevelSetup {
 			board[gold1.getLocation()] = gold1;
 			board[gold2.getLocation()] = gold2;
 			
-			System.out.println(sign.character);
-			System.out.println(mine1.toString());
+			System.out.println("P - This player is you");
+			System.out.println(gold1.toString());
 			System.out.println(rupert.toString());
 			System.out.println(hopper1.toString());
-			System.out.println(gold1.toString());
+			System.out.println(mine1.toString());
+			System.out.println(sign.character + "Caution Sign (Does nothing)");
 		}
 	}
 

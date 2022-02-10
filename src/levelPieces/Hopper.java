@@ -97,7 +97,7 @@ public class Hopper extends GamePiece implements Moveable {
 			while (gameBoard[dummyLoc] != null && (dummyLoc < (GameEngine.BOARD_SIZE - 2))) {
 				// Decrement dummy location
 				dummyLoc = dummyLoc + 2;
-				System.out.println("Dummy location is:" + dummyLoc);
+//				System.out.println("Dummy location is:" + dummyLoc);
 			}
 			
 			// If dummy is less than 0, set whichWay to right
